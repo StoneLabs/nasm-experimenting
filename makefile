@@ -14,3 +14,9 @@ clib_main:
 	@echo ""
 	@build/clib_main
 	@echo ""
+pi:
+	nasm -felf64 pi.asm -o build/pi.o 
+	gcc -fPIC -lc build/pi.o -o build/pi 
+	@echo ""
+	@build/pi
+	@echo ""
